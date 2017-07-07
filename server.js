@@ -1,0 +1,9 @@
+var express = require('express');
+// Create our app
+var app = express();
+
+app.use(express.static('public'));
+
+app.listen(3001,function(){
+  console.log('server is up on 3001');
+});

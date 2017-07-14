@@ -1,11 +1,13 @@
 var React = require('react');
+var { connect } = require('react-redux');
+var actions = require('actions');
 
 var Todo = React.createClass({
   render: function () {
-    var {id, text, completed} = this.props;
+    var {id, text, completed, dispatch} = this.props;
     return(
       <div onClick={() => {
-          this.props.onToggle(id);
+          dispatch(actions.toggleTodo(id))
         }}>
         <input type="checkbox" checked={completed}/>
       {text}
@@ -14,4 +16,4 @@ var Todo = React.createClass({
   }
 });
 
-module.exports = Todo;
+module.exports = connect()(Todo);

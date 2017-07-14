@@ -1,5 +1,7 @@
-# React_Todo_App
+# Todo App Uses Concepts of React as ReactJS, Redux, React-Redux, Redux-thunk
 
 npm install
 
-npm start run
+webpack -w
+
+node server.js
